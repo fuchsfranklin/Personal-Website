@@ -73,6 +73,22 @@ ui <- tagList(
                  tabPanel(title = "Personal Projects",
                           h3("Personal Projects and Web-Apps"),
                           tags$br(),
+                          h4("Parallelizing Artificial Neural Network Training with the H2o Framework"),
+                          tags$ul(
+                            tags$li(
+                              h5("Project Introduction"),
+                              p("BLABLA.")
+                            ),
+                          ),
+                          tags$br(),
+                          h4("Alternating Least Squares based Recommendation Engine for Amazon Purchasing Data"),
+                          tags$ul(
+                            tags$li(
+                              h5("Project Introduction"),
+                              p("BLABLA.")
+                            ),
+                          ),
+                          tags$br(),
                           uiOutput("proj1"),
                           tags$ul(
                             tags$li(
@@ -80,7 +96,7 @@ ui <- tagList(
                                     p("The first aim of this stochastic models and simulation project is to understand the metropolis-hastings algorithm and several markov-chain-monte-carlo diagnostic methods at a more intuitive and visual level through plots that are both animated and interactive. My second aim is to present my first aim in a cohesive and compect manner to those unfamiliar with MCMC and the R-Programming Language. It is important to mention that the time-dependent nature of a markov chain and the amount of visually appealing parameters are optimal for creating animated illustrations. The immediate next step I want to take for this project is adding another tab containing end-to-end analysis for a simple bayesian model which utilizes the Metropolis-Hastings Algorithm to bring the concepts of all other tabs together.")
                             )
                           ),
-                            tags$br(),
+                          tags$br(),
                           h4("Comparing Regularization Techniques on Simulated Data"),
                           tags$ul(
                             tags$li(
