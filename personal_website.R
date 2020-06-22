@@ -45,9 +45,9 @@ ui <- tagList(
  
                  
                  ################################################################### 
-                 tabPanel(title = "My Research",
-                          h3("Research Overview"),
-                          p("The main aspects of my research can be summarized by outlining three intersecting areas."),
+                 tabPanel(title = "My Work",
+                          h3("Overview"),
+                          p("The main aspects of my work can be summarized by outlining three intersecting areas."),
                           tags$hr(),
                           tags$ul(
                             tags$li(
@@ -73,7 +73,7 @@ ui <- tagList(
                  tabPanel(title = "Personal Projects",
                           h3("Personal Projects and Web-Apps"),
                           tags$br(),
-                          h4("Parallelizing Artificial Neural Network Training with the H2o Framework"),
+                          h4("Parallelized Artificial Neural Network Training for Big Data"),
                           tags$ul(
                             tags$li(
                               h5("Project Introduction"),
@@ -81,7 +81,7 @@ ui <- tagList(
                             ),
                           ),
                           tags$br(),
-                          h4("Alternating Least Squares based Recommendation Engine for Amazon Purchasing Data"),
+                          h4("End-To-End Amazon Product Recommendation Engine"),
                           tags$ul(
                             tags$li(
                               h5("Project Introduction"),
