@@ -1,2 +1,2 @@
 # Personal-Website
-Personal website and project portfolio
+A personal project to create my website as a organized portfolio of my current work and personal projects.
