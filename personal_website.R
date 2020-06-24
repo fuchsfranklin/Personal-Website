@@ -5,10 +5,6 @@ library(shinyAce)
 library(sendmailR)
 
 
-#WORKING ON
-  # Contact Me Section
-
-
 #UI
 ###################################################################
 ui <- tagList(
@@ -33,11 +29,11 @@ ui <- tagList(
                  tabPanel(withMathJax(),
                           title = "About Me",
                           img(src="unr_logo.png", height = '50px', width = '50px',align="top"),
-                          h3("Professional Bio"),
+                          h4("Professional Bio"),
                           p("Currently, I am an honors student majoring in mathematics and minoring in big data at UNR. With Dr. Mihye Ahn as my mentor, I am a student researcher funded by the IDeA Network of Biomedical Research Excellence UROP Award. My current work is focused on traumatic brain injury classification. Specifically, I use both supervised machine learning and traditional statistical methods to predict the survival of traumatic brain injury patients according to National Trauma Data Bank data. The primary aim of my research is to deploy the best-performing model in a portable and self-contained format to be utilized in healthcare settings to assist professionals with TBI severity assessment and quantitatively informed decision making, especially in situations where patients do not have access to trained professionals. I am currently also an honors peer coach, where I help first year honors students gain experience networking with professors while individually mentoring them in their pursuits towards their academic goals."),
-                          h3("My Interests"),   
+                          h4("My Interests"),   
                           p("In addition to mathematics and statistics, I really enjoy learning about biology, especially concerning problems in bioinformatics. Although study design is a relatively established field, I also find the statistical aspects of studies fascinating and could imagine myself pursuing a graduate degree where both epidemiological concepts and statistical theory are combined. I also quite like programming in relation to high performance computing and web-application development. Thus, I plan to go to graduate school for either computational mathematics or biostatistics. In my free-time I like working out, programming, and mindfulness meditation."),
-                          h3("Website Info"),
+                          h4("Website Info"),
                           p("I created this website as a personal project to improve my HTML and R Shiny programming skills. I recently expanded this website as a portfolio to present my current work and personal projects in a organized manner. Since I am continually working to improve this website, feel free to inform me if something does not work correctly."),
                                     
                  ), 
@@ -46,7 +42,7 @@ ui <- tagList(
                  
                  ################################################################### 
                  tabPanel(title = "My Work",
-                          h3("Overview"),
+                          h4("A Quick Overview"),
                           p("The main aspects of my work can be summarized by outlining three intersecting areas."),
                           tags$hr(),
                           tags$ul(
@@ -71,20 +67,20 @@ ui <- tagList(
                  
                  ################################################################### 
                  tabPanel(title = "Personal Projects",
-                          h3("Personal Projects and Web-Apps"),
+                          h4("Personal Projects and Web-Apps"),
                           tags$br(),
-                          h4("Parallelized Artificial Neural Network Training for Big Data"),
+                          h5("Parallelized Artificial Neural Network Training for Big Data"),
                           tags$ul(
                             tags$li(
-                              h5("Project Introduction"),
+                              tags$b("Project Introduction"),
                               p("BLABLA.")
                             ),
                           ),
                           tags$br(),
-                          h4("End-To-End Amazon Product Recommendation Engine"),
+                          h5("End-To-End Amazon Product Recommendation Engine"),
                           tags$ul(
                             tags$li(
-                              h5("Project Introduction"),
+                              tags$b("Project Introduction"),
                               p("BLABLA.")
                             ),
                           ),
@@ -92,15 +88,15 @@ ui <- tagList(
                           uiOutput("proj1"),
                           tags$ul(
                             tags$li(
-                                    h5("Project Introduction"),
+                              tags$b("Project Introduction"),
                                     p("The first aim of this stochastic models and simulation project is to understand the metropolis-hastings algorithm and several markov-chain-monte-carlo diagnostic methods at a more intuitive and visual level through plots that are both animated and interactive. My second aim is to present my first aim in a cohesive and compect manner to those unfamiliar with MCMC and the R-Programming Language. It is important to mention that the time-dependent nature of a markov chain and the amount of visually appealing parameters are optimal for creating animated illustrations. The immediate next step I want to take for this project is adding another tab containing end-to-end analysis for a simple bayesian model which utilizes the Metropolis-Hastings Algorithm to bring the concepts of all other tabs together.")
                             )
                           ),
                           tags$br(),
-                          h4("Comparing Regularization Techniques on Simulated Data"),
+                          h5("Comparing Regularization Techniques on Simulated Data"),
                           tags$ul(
                             tags$li(
-                              h5("Project Introduction"),
+                              tags$b("Project Introduction"),
                               p("The aims of this project are to simulate multivariate data from underlying linear models with varying degrees of correlation among predictors and then observing how effective different variable selection methods perform on each dataset by fitting a linear regression model with the selected variables. Thus, we first simulate 50 datasets for the first three underlying models from section 7 of the Paper 'Regression Shrinkage and Selection via the Lasso' by Tibshirani (1996). We then fit the models according several variable selection and shrinkage methods. Finally, we use mean and median mean square error to compare performances. The techniques being compared are Ordinary Least Squares (No Variable Selection), LASSO, Ridge, All possible Regression, Forward Selection, Backward Elimination, and Stepwise Selection. The immediate next step for this project is to add performance metrics such as AIC and BIC in addition to the mean and median MSE to better capture model performances. I also want to vectorize all loops and generally reduce redudant variable storage where possible.")
                             ),
                           )
@@ -117,7 +113,7 @@ ui <- tagList(
                             tags$li(p("Email: fuchs.franklin@gmail.com"))
                           ),
                           tags$br(),
-                          h4("Or Fill Out a Contact Form"),
+                          h4("Or Fill Out a Form"),
                           hr(),
                           #
                           fluidRow(
@@ -148,7 +144,7 @@ ui <- tagList(
 server <- function(input, output) {
   
   # MCMC project Reference
-  url <- a(h4("An Intuitive Introduction to Metropolis-Hastings Algorithm Sampling and Diagnostics",style = "color:blue"), href="https://franklinfuchs.shinyapps.io/MCMC_Visual_Project/")
+  url <- a(h5("An Intuitive Introduction to Metropolis-Hastings Algorithm Sampling and Diagnostics",style = "color:blue"), href="https://franklinfuchs.shinyapps.io/MCMC_Visual_Project/")
   output$proj1 <- renderUI({
     tagList("", url)
   })
