@@ -42,8 +42,8 @@ ui <- tagList(
                  
                  ################################################################### 
                  tabPanel(title = "My Work",
-                          h4("A Quick Overview"),
-                          p("The main aspects of my work can be summarized by outlining three intersecting areas."),
+                          h4("Overview"),
+                          p("The main aspects of my work as a student researcher can be summarized by outlining the following three intersecting areas."),
                           tags$hr(),
                           tags$ul(
                             tags$li(
@@ -106,33 +106,13 @@ ui <- tagList(
     
                  ###################################################################
                  tabPanel(title = "Contact Me",
-                          h4("Contact Information"),
+                          h4("Contact Info"),
                           hr(),
                           tags$ul(
-                            tags$li(p("GitHub: https://github.com/fuchsfranklin")),
-                            tags$li(p("Email: fuchs.franklin@gmail.com"))
+                            tags$li(tags$h6(icon("github", lib = "font-awesome"),HTML('&nbsp;'),"https://github.com/fuchsfranklin")),
+                            tags$li(tags$h6(icon("envelope", lib = "font-awesome"),HTML('&nbsp;'),"fuchs.franklin@gmail.com"))
                           ),
-                          tags$br(),
-                          h4("Or Fill Out a Form"),
-                          hr(),
-                          #
-                          fluidRow(
-                            shinydashboard::box(
-                                 splitLayout(
-                                   textInput(inputId="subject",label= tags$b("Your Name")),
-                                   textInput(inputId="from", label=tags$b("Your Email"))
-                                ),
-                                width = 7
-                             )
-                           ),
-                          
-                          
-                          fluidRow(
-                          column(7,aceEditor(outputId="message", value="Your message here",fontSize = 14, height = "100px"))
-                          ),
-                          
-                          actionButton("send", "Send Email")
-                          
+                          hr()
                  )
                  ,fluid=FALSE
   )
@@ -143,23 +123,12 @@ ui <- tagList(
 ###################################################################
 server <- function(input, output) {
   
-  # MCMC project Reference
+  # MCMC Hyperlink
   url <- a(h5("An Intuitive Introduction to Metropolis-Hastings Algorithm Sampling and Diagnostics",style = "color:blue"), href="https://franklinfuchs.shinyapps.io/MCMC_Visual_Project/")
   output$proj1 <- renderUI({
     tagList("", url)
   })
   
-  # Contact Information Setup
-  
-  #MAKE THIS REACTIVE
-  observe({
-    if(is.null(input$send) || input$send==0) return(NULL)
-    from <- isolate(input$from)
-    to <- isolate("fuchs.franklin@gmail.com")
-    subject <- isolate(input$subject)
-    msg <- isolate(input$message)
-    sendmail(from, to, subject, msg)
-  })
 }
 
 
