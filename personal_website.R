@@ -2,7 +2,6 @@ library(shiny)
 library(shinythemes)
 library(shinycustomloader)
 library(shinyAce)
-library(sendmailR)
 
 
 #UI
@@ -109,9 +108,19 @@ ui <- tagList(
                           h4("Contact Info"),
                           hr(),
                           tags$ul(
-                            tags$li(tags$h6(icon("github", lib = "font-awesome"),HTML('&nbsp;'),"https://github.com/fuchsfranklin")),
-                            tags$li(tags$h6(icon("envelope", lib = "font-awesome"),HTML('&nbsp;'),"fuchs.franklin@gmail.com"))
+                            tags$li(tags$h6(icon("github", lib = "font-awesome"),HTML('&nbsp;'),"GitHub: ", a("fuchsfranklin", href = "https://github.com/fuchsfranklin"))),
+                            tags$li(tags$h6(icon("envelope", lib = "font-awesome"),HTML('&nbsp;'),"Email: fuchs.franklin@gmail.com")),
                           ),
+                          hr(),
+                          fluidRow(
+                            column(4,withLoader(imageOutput("plot4"),type="html",loader="loader6")),
+                            column(4,withLoader(imageOutput("plot5"),type="html",loader="loader6")),
+                            column(4,withLoader(imageOutput("plot6"),type="html",loader="loader6"))
+                          ),
+                          tags$br(),
+                          tags$br(),
+                          tags$p(tags$b("What are these Plots? "),"They are MH-Algorithm Samples generated with different initial values to illustrate that inital value choice does not matter for convergence of chains (view my MH-Algorithm sampling project for more detail).",style = "font-size:12px;"),
+                          hr(),
                           hr()
                  )
                  ,fluid=FALSE
@@ -129,8 +138,36 @@ server <- function(input, output) {
     tagList("", url)
   })
   
+  # MCMC gifs 
+  plot_unreactive1 <-
+    {
+      list(src = "outfile7.gif",
+           contentType = 'image/gif',
+           width = 430,
+           height = 425
+      )}
+  
+  plot_unreactive2 <-
+    {
+      list(src = "outfile8.gif",
+           contentType = 'image/gif',
+           width = 430,
+           height = 425
+      )}
+  
+  plot_unreactive3 <-
+    {
+      list(src = "outfile9.gif",
+           contentType = 'image/gif',
+           width = 430,
+           height = 425
+      )}
+  
+  output$plot4 <- renderImage(plot_unreactive1,deleteFile = FALSE)
+  output$plot5 <- renderImage(plot_unreactive2,deleteFile = FALSE)
+  output$plot6 <- renderImage(plot_unreactive3,deleteFile = FALSE)
+  
 }
-
 
 #App Construction
 ###################################################################
