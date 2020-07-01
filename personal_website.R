@@ -119,7 +119,7 @@ ui <- tagList(
                           ),
                           tags$br(),
                           tags$br(),
-                          tags$p(tags$b("What are these Plots? "),"They are MH-Algorithm Samples generated with different initial values to illustrate that inital value choice does not matter for convergence of chains (view my MH-Algorithm sampling project for more detail).",style = "font-size:12px;"),
+                          tags$p(tags$b("What are these Plots? "),"They are MH-Algorithm Samples generated with mutliple different initial values to illustrate the practical utility of Burn-In removal (for potential downsides of Burn-In removal please see my MCMC project).",style = "font-size:12px;"),
                           hr(),
                           hr()
                  )
