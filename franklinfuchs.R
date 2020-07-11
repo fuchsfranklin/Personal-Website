@@ -29,11 +29,11 @@ ui <- tagList(
                           title = "About Me",
                           img(src="unr_logo.png", height = '50px', width = '50px',align="top"),
                           h4("Professional Bio"),
-                          p("Currently, I am an honors student majoring in mathematics and minoring in big data at UNR. With Dr. Mihye Ahn as my faculty mentor, I am a student researcher funded by the IDeA Network of Biomedical Research Excellence UROP Award. My current work is focused on traumatic brain injury classification. Specifically, I use both supervised machine learning and traditional statistical methods to predict the survival of traumatic brain injury patients according to National Trauma Data Bank data. The primary aim of my research is to deploy the best-performing model in a portable and self-contained format to be utilized in healthcare settings to assist professionals with TBI severity assessment and quantitatively informed decision making. I am currently also an honors peer coach, where I help first year honors students gain experience networking with professors while individually mentoring them in their pursuits towards their academic goals."),
+                          p("Currently, I am an honors student majoring in mathematics and minoring in big data at UNR. With Dr. Mihye Ahn as my faculty mentor, I am a student researcher funded by the IDeA Network of Biomedical Research Excellence UROP Award. My current work is focused on traumatic brain injury survival classification. Specifically, I use both supervised machine learning and traditional statistical methods to predict the survival of traumatic brain injury patients according to National Trauma Data Bank data. The primary aim of my research is to deploy the best-performing model in a portable and self-contained format to be utilized in healthcare settings to assist professionals with TBI severity assessment and quantitatively informed decision making. I am currently also an honors peer coach, where I help first year honors students gain experience networking with professors while individually mentoring them in their pursuits towards their academic goals."),
                           h4("My Interests"),   
-                          p("In addition to mathematics and statistics, I really enjoy learning about biology, especially concerning problems in bioinformatics and immunology. Although study design is a relatively established field, I also find the statistical aspects of studies fascinating and could imagine myself pursuing a graduate degree where both epidemiological concepts and statistical theory are combined. I also quite like programming in relation to high performance computing and web-application development. In my free-time I like working out, programming, and mindfulness meditation."),
+                          p("The areas that I am most interested in, and have the most experience with, are binary classification, dimensionality reduction, and predictive modeling. In addition to mathematics and statistics, I really enjoy learning about biology, especially concerning problems in immunology and bioinformatics. Although study design is a relatively established field, I also find the statistical aspects of studies fascinating and could imagine myself pursuing a graduate degree where both epidemiological concepts and statistical theory are combined. I also quite like programming in relation to high performance computing and web-application development. In my free-time I like working out, programming, and mindfulness meditation."),
                           h4("Website Info"),
-                          p("I created this website as a personal project to improve my HTML and R Shiny programming skills. I recently expanded this website as a portfolio to present my current work and personal projects in a organized manner. Since I am continually working to improve this website, feel free to inform me if something does not work correctly."),
+                          p("I created this website as a personal project to improve my HTML and R Shiny programming skills, and recently expanded this website as a portfolio to present my current work and personal projects in a organized manner. Since I am continually working to improve this website, feel free to inform me if something does not work correctly."),
                                     
                  ), 
                  
@@ -46,13 +46,13 @@ ui <- tagList(
                           tags$hr(),
                           tags$ul(
                             tags$li(
-                              h5("Traumatic Brain Injury Prediction"),
+                              h5("Traumatic Brain Injury Survival Prediction"),
                               p("Traumatic Brain Injury (TBI) occurs when a sudden trauma to the head causes brain damage. Concerning public health, TBI is an issue that accounts for a small percentage of injury-related emergency department (ED) visits, but a large percentage of injury related deaths. TBI Mortality Prediction can provide a basis for informed medical decisions and trauma care where assessment by medical professionals is limited or inaccessible, such as for triage in Mass Casualty Incidents (MCI) or in pre-hospital settings. My work aims apply both supervised machine learning and traditional statisical methods to National Trauma Data Bank (NTDB) data and deploy the best performing model as a user-friendly web-application.")
                             ),
                             tags$hr(),
                             tags$li(
                               h5("Imbalanced Outcome Classification"),
-                              p("Although there currently exist Logistic Regression (LR) based TBI prediction models, these do not account for the fact that the rates of pediatric patient non-survival is much lower than for older TBI patients, and so it follows that the number of observations for the outcome variable are unequally distributed such that there are many more non-cases (survivors) than cases (non-survivors). This imbalance in the outcome variable leads to an overestimation of the probability of the majority class, and more importantly, to an underestimation of the probability of the minority class as an emergent property. In the context of healthcare, false positives can be costly, but false negatives can be life-threatening, depending on the purpose of the utilized model. Therefore, the methods I utilize include case-weighted models, subsampling techniques, and performance evaluation metrics that account for class imbalance.")
+                              p("Although there currently exist Logistic Regression (LR) based TBI prediction models, these do not account for the fact that the rates of pediatric patient non-survival is much lower than for older TBI patients, and so it follows that the number of observations for the outcome variable are unequally distributed such that there are many more non-cases (survivors) than cases (non-survivors). This imbalance in the outcome variable leads to an overestimation of the probability of the majority class, and more importantly, to an underestimation of the probability of the minority class (as an emergent property). In the context of healthcare, false positives can be costly, but false negatives can be life-threatening, depending on the purpose of the utilized model. Therefore, the methods I utilize include case-weighted models, subsampling techniques, and performance evaluation metrics that account for class imbalance.")
                             ),
                             tags$hr(),
                             tags$li(
@@ -84,7 +84,7 @@ ui <- tagList(
                             ),
                           ),
                           tags$br(),
-                          h5("Parallelized Artificial Neural Network Training and Tuning to Reduce Total Fitting Times"),
+                          h5("Parallelized Artificial Neural Network Fitting and Tuning to Reduce Total Training Time"),
                           tags$ul(
                             tags$li(
                               tags$b("Project Introduction"),
@@ -92,7 +92,7 @@ ui <- tagList(
                             ),
                           ),
                           tags$br(),
-                          h5("An End-To-End Data-Analysis and Product Recommendation Engine Project"),
+                          h5("Interactive Product Recommendation Engine Dashboard"),
                           tags$ul(
                             tags$li(
                               tags$b("Project Introduction"),
@@ -118,7 +118,7 @@ ui <- tagList(
                           ),
                           tags$br(),
                           tags$br(),
-                          tags$p(tags$b("What are these Animations? "),"They are Metropolis Hastings Samples generated with multiple different initial values to illustrate the practical utility of Burn-In removal (for potential downsides of Burn-In removal and additional animations please see my MCMC/MH project).",style = "font-size:12px;"),
+                          tags$p(tags$b("What are these Animations? "),"They are Metropolis Hastings Samples generated with multiple different initial values to illustrate the practical utility of Burn-In removal (for potential downsides of Burn-In removal and more such animations please see my MCMC/MH project).",style = "font-size:12px;"),
                           hr(),
                           hr()
                  )
