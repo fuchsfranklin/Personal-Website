@@ -76,7 +76,7 @@ ui <- tagList(
                             )
                           ),
                           tags$br(),
-                          h5("Comparing Regularization Techniques on Simulated Data"),
+                          uiOutput("proj2"),
                           tags$ul(
                             tags$li(
                               tags$b("Project Introduction"),
@@ -135,6 +135,12 @@ server <- function(input, output) {
   url <- a(h5("An Intuitive Introduction to Metropolis-Hastings Algorithm Sampling and Diagnostics",style = "color:blue"), href="https://franklinfuchs.shinyapps.io/MCMC_Visual_Project/")
   output$proj1 <- renderUI({
     tagList("", url)
+  })
+  
+  # Regularization Hyperlink
+  url1 <- a(h5("Comparing Regularization Techniques on Simulated Data",style = "color:blue"), href="https://rpubs.com/franklinfuchs/Regularization-Project")
+  output$proj2 <- renderUI({
+    tagList("", url1)
   })
   
   # MCMC gifs 
