@@ -1,13 +1,16 @@
+###################################################################
+# Libraries
+###################################################################
 library(shiny)
 library(shinythemes)
 library(shinycustomloader)
 library(shinyAce)
 
 
-#UI
+###################################################################
+# UI
 ###################################################################
 ui <- tagList(
-  
        fluidPage(
           list(tags$head(HTML('<link rel="icon", href="MyIcon.png", 
                                    type="image/png" />'))),
@@ -15,35 +18,39 @@ ui <- tagList(
              titlePanel(
                 title="", windowTitle="My Window Title"
           )
-        )),
-        navbarPage(theme = shinytheme("paper"),
-                 
-                 title=div("Franklin Fuchs"),
-                 
-                 
-                 
-                 
-                 #Pages                 
-                 ###################################################################                 
+        )
+      ),
+      
+      navbarPage(theme = shinytheme("paper"),title=div("Franklin Fuchs"),
+            
+###################################################################
+# About Me Page
+###################################################################                
                  tabPanel(withMathJax(),
                           title = "About Me",
+                          
                           img(src="unr_logo.png", height = '50px', width = '50px',align="top"),
+                          
                           h4("Professional Bio"),
                           p("Currently, I am an honors student majoring in mathematics and minoring in big data at UNR. With Dr. Mihye Ahn as my faculty mentor, I am a student researcher funded by the IDeA Network of Biomedical Research Excellence UROP Award. My current work is focused on traumatic brain injury survival classification. Specifically, I use both supervised machine learning and traditional statistical methods to predict the survival of traumatic brain injury patients according to National Trauma Data Bank data. The primary aim of my research is to deploy the best-performing model in a portable and self-contained format to be utilized in healthcare settings to assist professionals with TBI severity assessment and quantitatively informed decision making. I am currently also an honors peer coach, where I help first year honors students gain experience networking with professors while individually mentoring them in their pursuits towards their academic goals."),
+                          
                           h4("My Interests"),   
-                          p("The areas that I am most interested in (and have the most experience with) are binary classification, dimensionality reduction, and predictive modeling. In addition to mathematics and statistics, I really enjoy learning about biology, especially concerning problems in immunology and bioinformatics. Although study design is a relatively established field, I also find the statistical aspects of studies fascinating and could imagine myself pursuing a graduate degree where both epidemiological concepts and statistical theory are combined. I also quite like programming in relation to high performance computing and web-application development. In my free-time I like working out, programming, and mindfulness meditation."),
+                          p("The areas that I am most interested in and have the most experience with are binary classification, dimensionality reduction, and predictive modeling. In addition to mathematics and statistics, I really enjoy learning about biology, especially concerning problems in immunology and bioinformatics. Although study design is a relatively established field, I also find the statistical aspects of studies fascinating and could imagine myself pursuing a graduate degree where both epidemiological concepts and statistical theory are combined. I also quite like programming in relation to high performance computing and web-application development. In my free-time I like working out, programming, and mindfulness meditation."),
+                          
                           h4("Website Info"),
                           p("I created this website as a personal project to improve my HTML and R Shiny programming skills, and recently expanded this website as a portfolio to present my current work and personal projects in a organized manner. Since I am continually working to improve this website, feel free to inform me if something does not work correctly."),
                                     
                  ), 
                  
- 
-                 
-                 ################################################################### 
+###################################################################
+# My Work Page
+###################################################################  
                  tabPanel(title = "My Work",
                           h4("Overview"),
+                          
                           p("The main aspects of my current work can be summarized by outlining the following three intersecting areas."),
                           tags$hr(),
+                          
                           tags$ul(
                             tags$li(
                               h5("Traumatic Brain Injury Survival Prediction"),
@@ -60,14 +67,16 @@ ui <- tagList(
                               p("Working with large amounts of obervations and computationally intensive machine learning models leads to model training and hyperparameter tuning times that can range from days to weeks. Thus, I make use of parallelization and High Performance Computing (HPC) capabilities to minimize model fitting time. I run most of my models on the local UNR HPC Clusters Pronghorn and Okapi. Specifically, I deploy models through containerization using both Singularity and Docker. Containerization, in relation to data analysis, can be beneficial, since dependencies such packages, software, and operating systems can be set up in a lightweight manner such that analyses are both reproducible and portable. Singularity is especially useful in my work, since Docker containers require administrator privileges, which is not a viable option for HPC clusters such as Pronghorn.")
                             )
                           )
-                          
-                          
                  ),
                  
-                 ################################################################### 
+###################################################################
+# Personal Projects Page
+################################################################### 
                  tabPanel(title = "Personal Projects",
+                          
                           h4("Personal Projects and Web-Apps"),
                           tags$br(),
+                          
                           uiOutput("proj1"),
                           tags$ul(
                             tags$li(
@@ -76,6 +85,7 @@ ui <- tagList(
                             )
                           ),
                           tags$br(),
+                          
                           uiOutput("proj2"),
                           tags$ul(
                             tags$li(
@@ -84,6 +94,7 @@ ui <- tagList(
                             ),
                           ),
                           tags$br(),
+                          
                           h5("Parallelized Artificial Neural Network Fitting and Tuning to Reduce Total Training Time"),
                           tags$ul(
                             tags$li(
@@ -92,6 +103,7 @@ ui <- tagList(
                             ),
                           ),
                           tags$br(),
+                          
                           h5("Interactive Product Recommendation Engine Dashboard"),
                           tags$ul(
                             tags$li(
@@ -101,16 +113,21 @@ ui <- tagList(
                           ),
                           tags$br(),
                  ),
-    
-                 ###################################################################
+
+###################################################################
+# Contact Me Page
+################################################################### 
                  tabPanel(title = "Contact Me",
+                          
                           h4("Contact Info"),
                           hr(),
+                          
                           tags$ul(
                             tags$li(tags$h6(icon("github", lib = "font-awesome"),HTML('&nbsp;'),"GitHub: ", a("fuchsfranklin", href = "https://github.com/fuchsfranklin"))),
                             tags$li(tags$h6(icon("envelope", lib = "font-awesome"),HTML('&nbsp;'),"Email: fuchs.franklin@gmail.com")),
                           ),
                           hr(),
+                          
                           fluidRow(
                             column(4,withLoader(imageOutput("plot4"),type="html",loader="loader6")),
                             column(4,withLoader(imageOutput("plot5"),type="html",loader="loader6")),
@@ -121,13 +138,13 @@ ui <- tagList(
                           tags$p(tags$b("What are these Animations? "),"They are Metropolis Hastings Samples generated with multiple different initial values to illustrate the practical utility of Burn-In removal (for potential downsides of Burn-In removal and more such animations please see my MCMC/MH project).",style = "font-size:12px;"),
                           hr(),
                           hr()
-                 )
-                 ,fluid=FALSE
+                 ),
+                 fluid=FALSE
   )
 )
 
-
-#Server
+###################################################################
+# Server
 ###################################################################
 server <- function(input, output) {
   
@@ -174,6 +191,7 @@ server <- function(input, output) {
   
 }
 
+################################################################### 
 #App Construction
 ###################################################################
 shinyApp(server = server, ui = ui)
