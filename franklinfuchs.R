@@ -80,7 +80,7 @@ ui <- tagList(
                           uiOutput("proj1"),
                           tags$ul(
                             tags$li(
-                              tags$b("(R Based) Project Introduction"),
+                              tags$b("(R-Based) Project Introduction"),
                               p("The first aim of this stochastic models and simulation project is to understand the metropolis-hastings algorithm and several markov-chain-monte-carlo diagnostic methods at a more intuitive and visual level through plots that are both animated and interactive. My second aim is to present my first aim in a cohesive and compect manner to those unfamiliar with MCMC and the R-Programming Language. It is important to mention that the time-dependent nature of a markov chain and the amount of visually appealing parameters are optimal for creating animated illustrations. The next step I will take for this project is to add a tab that brings all other concepts together in one cohesive analysis.")
                             )
                           ),
@@ -89,7 +89,7 @@ ui <- tagList(
                           uiOutput("proj2"),
                           tags$ul(
                             tags$li(
-                              tags$b("(R Based) Project Introduction"),
+                              tags$b("(R-Based) Project Introduction"),
                               p("The aims of this project are to simulate multivariate data from three underlying linear models with varying degrees of correlation among predictors and then observing how effective different variable selection methods perform on each dataset by fitting a linear regression model with the selected variables. Thus, we first simulate 50 datasets for every underlying model from section 7 of the Paper \"Regression Shrinkage and Selection via the Lasso\" by Tibshirani (1996). We then fit the models according several variable selection and shrinkage methods and consider Akaike Information Criterion (AIC), Bayesian Information Criterion (BIC), and Adjusted R-Squared Value as performance metrics. My next goal is to vectorize all for loops and generally reduce redundant variable storage where possible.")
                             ),
                           ),
@@ -98,7 +98,7 @@ ui <- tagList(
                           h5("Task Automation Toolset"),
                           tags$ul(
                             tags$li(
-                              tags$b("(Python Based) Project Introduction"),
+                              tags$b("(Python-Based) Project Introduction"),
                               p("Work in Progress.")
                             ),
                           ),
@@ -107,7 +107,7 @@ ui <- tagList(
                           h5("Parallelized Artificial Neural Network Fitting and Tuning to Reduce Total Training Time"),
                           tags$ul(
                             tags$li(
-                              tags$b("(R Based) Project Introduction"),
+                              tags$b("(R-Based) Project Introduction"),
                               p("Work in Progress.")
                             ),
                           ),
@@ -116,7 +116,7 @@ ui <- tagList(
                           h5("Interactive Product Recommendation Engine Dashboard"),
                           tags$ul(
                             tags$li(
-                              tags$b("(R Based) Project Introduction"),
+                              tags$b("(R-Based) Project Introduction"),
                               p("Work in Progress.")
                             ),
                           ),
