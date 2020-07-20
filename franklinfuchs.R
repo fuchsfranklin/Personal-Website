@@ -95,7 +95,7 @@ ui <- tagList(
                           ),
                           tags$br(),
                           
-                          h5("Task Automation Toolset"),
+                          h5("Task Automation and Web Scraping Toolset"),
                           tags$ul(
                             tags$li(
                               tags$b("(Python-Based) Project Introduction"),
