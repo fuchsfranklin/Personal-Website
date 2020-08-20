@@ -95,6 +95,15 @@ ui <- tagList(
                           ),
                           tags$br(),
                           
+                          h5("Web Mining and Task Automation Toolset"),
+                          tags$ul(
+                            tags$li(
+                              tags$b("(Python-Based) Project Introduction"),
+                              p("Work in Progress.")
+                            ),
+                          ),
+                          tags$br(),
+                          
                           h5("Parallelized Artificial Neural Network Fitting and Tuning to Reduce Total Training Time"),
                           tags$ul(
                             tags$li(
@@ -108,15 +117,6 @@ ui <- tagList(
                           tags$ul(
                             tags$li(
                               tags$b("(R-Based) Project Introduction"),
-                              p("Work in Progress.")
-                            ),
-                          ),
-                          tags$br(),
-                          
-                          h5("Web Mining and Task Automation Toolset"),
-                          tags$ul(
-                            tags$li(
-                              tags$b("(Python-Based) Project Introduction"),
                               p("Work in Progress.")
                             ),
                           ),
