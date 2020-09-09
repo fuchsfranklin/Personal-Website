@@ -31,11 +31,18 @@ ui <- tagList(
                           
                           img(src="unr_logo.png", height = '50px', width = '50px',align="top"),
                           
+                          tags$br(),
+                          tags$br(),
+                          
                           h4("Professional Bio"),
                           p("Currently, I am an honors student majoring in mathematics and minoring in big data at UNR. With Dr. Mihye Ahn as my faculty mentor, I am a student researcher funded by the IDeA Network of Biomedical Research Excellence UROP Award. My current work is focused on traumatic brain injury survival classification. Specifically, I use both supervised machine learning and traditional statistical methods to predict the survival of traumatic brain injury patients according to National Trauma Data Bank data. The primary aim of my work is to deploy the best-performing model in a portable and self-contained format to be utilized in healthcare settings. Together with Dr. Daniel Joyce, I am currently also in the exploratory phase of developing a low-cost wearable for circadian rhythm measurement and sleep stage prediction. Additionally, I am an honors peer coach and teaching assistant, where I help first year honors students gain experience networking with professors while individually mentoring them in their pursuits towards their academic goals. In Spring 2021, I will be working at the Nevada Center for Bioinformatics under Dr. Juli Petereit."),
                           
+                          tags$br(),
+                          
                           h4("My Interests"),   
                           p("The areas that I am most interested in and have the most experience with are binary classification, dimensionality reduction, and predictive modeling. In addition to mathematics and statistics, I really enjoy learning about biology, especially concerning problems in immunology and bioinformatics. Although study design is a relatively established field, I also find the statistical aspects of studies fascinating and could imagine myself pursuing a graduate degree where both epidemiological concepts and statistical theory are combined. I also quite like programming in relation to high-performance-computing and web-application development. In my free-time I like working out, mindfulness meditation, and programming/coding."),
+                          
+                          tags$br(),
                           
                           h4("Website Info"),
                           p("I created this website as a personal project to improve my R Shiny and HTML programming skills, and recently expanded this website as a portfolio to present my current work and personal projects in a organized manner. Since I am continually working to improve this website, feel free to inform me if something does not work correctly."),
@@ -95,15 +102,6 @@ ui <- tagList(
                           ),
                           tags$br(),
                           
-                          h5("Web Mining and Task Automation Toolset"),
-                          tags$ul(
-                            tags$li(
-                              tags$b("(Python-Based) Project Introduction"),
-                              p("Work in Progress.")
-                            ),
-                          ),
-                          tags$br(),
-                          
                           h5("Parallelized Artificial Neural Network Fitting and Tuning to Reduce Total Training Time"),
                           tags$ul(
                             tags$li(
@@ -121,6 +119,15 @@ ui <- tagList(
                             ),
                           ),
                           tags$br(),
+                          
+                          h5("Web Mining and Task Automation Toolset"),
+                          tags$ul(
+                            tags$li(
+                              tags$b("(Python-Based) Project Introduction"),
+                              p("Work in Progress.")
+                            ),
+                          ),
+                          tags$br()
                  ),
 
 ###################################################################
@@ -145,7 +152,6 @@ ui <- tagList(
                           tags$br(),
                           tags$br(),
                           tags$p(tags$b("What are these Animations? "),"They are Metropolis Hastings Samples generated with multiple different initial values to illustrate the practical utility of Burn-In removal (for potential downsides of Burn-In removal and more such animations please see my MCMC/MH project).",style = "font-size:12px;"),
-                          hr(),
                           hr()
                  ),
                  fluid=FALSE
