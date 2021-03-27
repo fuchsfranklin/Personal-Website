@@ -28,19 +28,19 @@ ui <- tagList(
 ###################################################################                
                  tabPanel(withMathJax(),
                           title = "About Me",
-                          
-                          img(src="unr_logo.png", height = '50px', width = '50px',align="top"),
-                          
-                          tags$br(),
-                          tags$br(),
+                          fluidRow(
+                            column(1,img(src="unr_logo.png", height = '50px', width = '50px',align="top")),
+                            column(1,img(src="JHU.png", height = '50px', width = '50px',align="top")),
+                            column(1,img(src="Pfizer.png", height = '50px', width = '100px',align="top"))
+                          ),
                           
                           h4("Professional Bio"),
-                          p("Currently, I am an honors student in mathematics and statistics with a minor in big data at UNR. With Dr. Mihye Ahn as my faculty mentor, I am a student researcher funded by the IDeA Network of Biomedical Research Excellence UROP Award. My current work is focused on traumatic brain injury survival classification. Specifically, I use both supervised machine learning and traditional statistical methods to predict the survival of traumatic brain injury patients according to National Trauma Data Bank data. The primary aim of my work is to deploy the best-performing model in a portable and self-contained format to be utilized in healthcare settings. Together with Dr. Daniel Joyce, I have received Honors Undegraduate Research Award (HURA) funding to develop a low-cost wearable for spectral distribution classification and circadian rhythm measurement. Additionally, I am an honors peer coach and teaching assistant, where I help teach an introductory course on academic integrity, professional networking, and undergraduate research while individually mentoring students in their pursuits towards their academic goals. At the end of January, I will be working at the Nevada Center for Bioinformatics under Dr. Juli Petereit."),
+                          p("Currently, I am an honors student in mathematics and statistics with a minor in big data at UNR. With my advisor Dr. Mihye Ahn, I am currently completing my honors thesis work on predicting imbalanced pediatric traumatic brain injury mortality using both supervised machine learning and regression-based methods. Together with Dr. Daniel Joyce, I am also currently working on building, programming, and calibrating a low-cost wearable for spectral distribution classification and circadian rhythm measurement with the Honors Undergraduate Research Award (HURA) funding I have received. Additionally, I am an honors peer coach, where I individually mentor students in their pursuits towards their academic goals. This summer, I will be a software development intern at the Pfizer Simulation and Modeling Science (SMS) group. Next fall, I will attend Johns Hopkins University for an ScM in Biostatistics."),
                           
                           tags$br(),
                           
                           h4("My Interests"),   
-                          p("The areas that I am most interested in and have the most experience with are binary classification, dimensionality reduction, and predictive modeling. In addition to mathematics and statistics, I really enjoy learning about biology, especially concerning problems in immunology and bioinformatics. Although study design is a relatively established field, I also find the statistical aspects of studies fascinating and could imagine myself pursuing a graduate degree where both epidemiological concepts and statistical theory are combined. I also quite like programming in relation to high-performance computing and web-application development. In my free-time I like working out, mindfulness meditation, and programming/coding."),
+                          p("The areas that I am most interested in and have the most experience with are binary classification, dimensionality reduction, and predictive modeling. In addition to mathematics and statistics, I really enjoy learning about biology, especially concerning problems in immunology and bioinformatics. I also quite like programming in relation to high-performance computing and web-application development. In my free-time I like working out, mindfulness meditation, and coding."),
                           
                           tags$br(),
                           
@@ -52,7 +52,7 @@ ui <- tagList(
 ###################################################################
 # My Work Page
 ###################################################################  
-                 tabPanel(title = "My Work",
+                 tabPanel(title = "Current Work",
                           h4("Overview"),
                           
                           p("The main aspects of my current work can be summarized by outlining the following three intersecting areas."),
@@ -79,7 +79,7 @@ ui <- tagList(
 ###################################################################
 # Personal Projects Page
 ################################################################### 
-                 tabPanel(title = "Personal Projects",
+                 tabPanel(title = "Past Work/Projects",
                           
                           h4("Personal Projects and Web-Apps"),
                           tags$br(),
