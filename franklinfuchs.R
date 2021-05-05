@@ -40,7 +40,7 @@ ui <- tagList(
                           tags$br(),
                           
                           h4("My Interests"),   
-                          p("The areas that I am most interested in and have the most experience with are binary classification, dimensionality reduction, and predictive modeling. In addition to mathematics and statistics, I really enjoy learning about biology, especially concerning problems in immunology and bioinformatics. I also quite like programming in relation to high-performance computing and web-application development. In my free-time I like working out, mindfulness meditation, and coding."),
+                          p("The areas that I am most interested in and have the most experience with are binary classification, dimensionality reduction, and predictive modeling. In addition to mathematics and statistics, I am especially interested in immunology and bioinformatics. Programming in relation to high-performance computing and web application development are other areas I find particularly engaging. In my free time, I like to code, I work out, and I practice mindfulness meditation."),
                           
                           tags$br(),
                           
