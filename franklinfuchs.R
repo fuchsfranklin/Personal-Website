@@ -79,7 +79,7 @@ ui <- tagList(
 ###################################################################
 # Personal Projects Page
 ################################################################### 
-                 tabPanel(title = "Past Work/Projects",
+                 tabPanel(title = "Projects",
                           
                           h4("Personal Projects and Web-Apps"),
                           tags$br(),
@@ -101,6 +101,17 @@ ui <- tagList(
                             ),
                           ),
                           tags$br(),
+                          
+                          uiOutput("proj3"),
+                          tags$ul(
+                            tags$li(
+                              tags$b("(R-Based) Project Introduction"),
+                              p("This pediatric TBI prediction web-application is part of my honors thesis on imbalanced outcome pediatric patient mortality classification, where the best-performing C5.0 decision tree classifier trained on Synthetic Minority Over-sampling TEchnique (SMOTE) subsampled data is the predictive model implemented here. Potential applications of such a web-application, as recommended to us by clinicians, could be when either diagnosis by a clinician is not possible or as an indirect clinicians aid to give an approximate survival estimate for parents or guardians. Simplicity, speed, and portability were the main priorities considered when developing the application.")
+                            ),
+                          ),
+                          tags$br(),
+                          
+                          
                           
                           h5("Parallelized Artificial Neural Network Fitting and Tuning to Reduce Total Training Time"),
                           tags$ul(
@@ -163,16 +174,22 @@ ui <- tagList(
 ###################################################################
 server <- function(input, output) {
   
-  # MCMC Hyperlink
+  # MCMC Project Hyperlink
   url <- a(h5("An Intuitive Introduction to Metropolis-Hastings Algorithm Sampling and Diagnostics",style = "color:blue"), href="https://franklinfuchs.shinyapps.io/MCMC_Visual_Project/")
   output$proj1 <- renderUI({
     tagList("", url)
   })
   
-  # Regularization Hyperlink
+  # Regularization Project Hyperlink
   url1 <- a(h5("Comparing Regularization Techniques on Simulated Data",style = "color:blue"), href="https://rpubs.com/franklinfuchs/Regularization-Project")
   output$proj2 <- renderUI({
     tagList("", url1)
+  })
+  
+  # TBI Prediction Project Hyperlink
+  url2 <- a(h5("Traumatic Brain Injury (TBI) Mortality Prediction Web-Application",style = "color:blue"), href="https://franklinfuchs.shinyapps.io/Pediatric-TBI-Prediction-Application/")
+  output$proj3 <- renderUI({
+    tagList("", url2)
   })
   
   # MCMC gifs 
